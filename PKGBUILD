@@ -12,7 +12,7 @@ url="https://github.com/flightaware/piaware"
 license=('BSD')
 
 depends=('git' 'autoconf' 'tcl' 'tcllib' 'tclx' 'tcltls'
-         'python' 'tk' 'tcllauncher' 'net-tools')
+         'python' 'python-setuptools' 'tk' 'tcllauncher' 'net-tools')
 
 source=('piaware::git+https://github.com/flightaware/piaware'
         'faup1090::git+https://github.com/flightaware/dump1090'
