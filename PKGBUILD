@@ -11,7 +11,7 @@ arch=('i686' 'i386' 'x86_64' 'amd64' 'armv6h' 'armv6l' 'armv7h' 'armv7l' 'armv8h
 url="https://github.com/flightaware/piaware"
 license=('BSD')
 
-depends=('git' 'autoconf' 'tcl' 'tcllib' 'tclx' 'tcltls'
+depends=('git' 'pkgconf' 'autoconf' 'tcl' 'tcllib' 'tclx' 'tcltls'
          'python' 'python-setuptools' 'tk' 'tcllauncher' 'net-tools')
 
 source=('piaware::git+https://github.com/flightaware/piaware'
