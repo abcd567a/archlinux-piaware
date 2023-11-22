@@ -1,6 +1,6 @@
 #!/bin/bash
 
-sudo pacman --needed -Sy fakeroot binutils git autoconf make gcc glibc patch which
+sudo pacman --needed -Sy fakeroot binutils git pkgconf autoconf make gcc glibc patch which
 sudo pacman --needed -Sy tcl python python-setuptools tk net-tools
 
 cd ~/
