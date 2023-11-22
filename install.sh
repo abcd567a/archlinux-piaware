@@ -1,4 +1,5 @@
 #!/bin/bash
+CLONED_FOLDER=${PWD}
 
 sudo pacman --needed -Sy fakeroot binutils git pkgconf autoconf make gcc glibc patch which
 sudo pacman --needed -Sy tcl python python-setuptools tk net-tools
@@ -21,6 +22,9 @@ makepkg -si
 cd ~/
 git clone https://aur.archlinux.org/tcllauncher
 cd tcllauncher
+makepkg -si
+
+cd ${CLONED_FOLDER}
 makepkg -si
 
 
