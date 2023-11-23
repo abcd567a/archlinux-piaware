@@ -1,5 +1,5 @@
 #!/bin/bash
-BUILD_FOLDER=/tmp/piaware-builder
+BUILD_FOLDER=${PWD}
 sudo pacman --needed -Sy fakeroot binutils git pkgconf autoconf make gcc glibc patch which
 sudo pacman --needed -Sy tcl python python-setuptools python-pip tk net-tools
 
