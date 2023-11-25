@@ -9,7 +9,7 @@
 `sudo pacman --needed -Sy fakeroot binutils git autoconf make gcc glibc patch which`
 </br>
 ### 1.2 - Install dependencies available in Arch Linux Repository </br>
-`sudo pacman --needed -Sy tcl python python-setuptools tk net-tools `
+`sudo pacman --needed -Sy tcl python python-setuptools python-build python-installer tk net-tools `
 </br>
 ### 1.3 - Build and Install depencies not available in repository.</br>
 NOTE: Building these requires build tools (item 1.1 and 1.2 above) to be installed first.</br>
