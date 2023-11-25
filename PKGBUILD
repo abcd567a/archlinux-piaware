@@ -41,7 +41,7 @@ package() {
   git reset --hard origin/master
   ## ./setup.py install --prefix=${pkgdir}/usr
   python -m build --wheel --no-isolation
-  python -m installer --destdir="$pkgdir" dist/*.whl
+  python -m installer --destdir="${pkgdir}" dist/*.whl
   install -Dm755 ${pkgdir}/usr/bin/fa-mlat-client  ${pkgdir}/usr/lib/piaware/helpers/fa-mlat-client
   rm -rf ${pkgdir}/usr/bin/
 
