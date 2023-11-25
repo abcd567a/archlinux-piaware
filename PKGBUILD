@@ -11,12 +11,12 @@ arch=('i686' 'i386' 'x86_64' 'amd64' 'armv6h' 'armv6l' 'armv7h' 'armv7l' 'armv8h
 url="https://github.com/flightaware/piaware"
 license=('BSD')
 
-depends=('git' 'pkgconf' 'autoconf' 'tcl' 'tcllib' 'tclx' 'tcltls'
-         'python' 'python-setuptools' 'tk' 'tcllauncher' 'net-tools')
+depends=('git' 'pkgconf' 'autoconf' 'tcltls' 'tcl' 'tcllib' 'tclx' 'tk' 'tcllauncher'
+         'python' 'python-setuptools' 'python-build' 'python-installer' 'net-tools')
 
 source=('piaware::git+https://github.com/flightaware/piaware'
         'faup1090::git+https://github.com/flightaware/dump1090'
-        'fa-mlat-client::git+https://github.com/mutability/mlat-client.git')
+        'fa-mlat-client::git+https://github.com/mutability/mlat-client')
 
 md5sums=('SKIP' 'SKIP' 'SKIP')
 
@@ -39,7 +39,9 @@ package() {
   cd ${srcdir}/fa-mlat-client
   git fetch --all
   git reset --hard origin/master
-  ./setup.py install --prefix=${pkgdir}/usr
+  ## ./setup.py install --prefix=${pkgdir}/usr
+  python -m build --wheel --no-isolation
+  python -m installer --destdir="$pkgdir" dist/*.whl
   install -Dm755 ${pkgdir}/usr/bin/fa-mlat-client  ${pkgdir}/usr/lib/piaware/helpers/fa-mlat-client
   rm -rf ${pkgdir}/usr/bin/
 
