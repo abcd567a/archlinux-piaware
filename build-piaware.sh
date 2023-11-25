@@ -2,6 +2,7 @@
 BUILD_FOLDER=${PWD}
 sudo pacman --needed -Sy fakeroot binutils git pkgconf autoconf make gcc glibc patch which
 sudo pacman --needed -Sy tcl python python-setuptools python-pip tk net-tools
+sudo pacman --needed -Sy python-build  python-installer  
 
 cd ${BUILD_FOLDER}
 git clone https://aur.archlinux.org/tcllib
