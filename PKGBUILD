@@ -43,8 +43,9 @@ package() {
   python -m build --wheel --no-isolation
   python -m installer --destdir="${pkgdir}" dist/*.whl
   install -Dm755 ${pkgdir}/usr/bin/fa-mlat-client  ${pkgdir}/usr/lib/piaware/helpers/fa-mlat-client
-  rm -rf ${pkgdir}/usr/bin/
-
+  rm ${pkgdir}/usr/bin/mlat-client
+  rm ${pkgdir}/usr/bin/fa-mlat-client
+  
 ## Build piaware
   cd ${srcdir}/piaware
   git fetch --all
