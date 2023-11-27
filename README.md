@@ -1,8 +1,21 @@
 ## Piaware package for Arch Linux and AlarmPi
-### Clones source code from Flightaware's Github Repository, and Builds Piaware package consisting of following components in a single package:</br>
+### Clones source code from Flightaware and mutability Github Repositories, and Builds Piaware package consisting of following components in a single package:</br>
 - Piaware
 - faup1090
 - fa-mlat-client
+
+## OPTION-1: Fully automated install
+
+Copy paste the script bellow in terminal and press Enter Key. The script will do everything for you, except that it will ask you provide password and your permission [yes/no] when installing build tools and dependency packages.
+
+```
+git clone https://github.com/abcd567a/archlinux-piaware && bash archlinux-piaware/build-piaware.sh
+
+```
+
+</br>
+
+## OPTION-2: Manual Method:
 
 ## 1 - Prepration </br>
 ### 1.1 - Install tools required to build packages - First thing to be done before attempting to build ANY package </br>
