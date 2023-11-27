@@ -6,7 +6,7 @@
 
 ## OPTION-1: Fully automated install
 
-Copy paste the script bellow in terminal and press Enter Key. The script will do everything for you, except that it will ask you provide password and your permission [yes/no] when installing build tools and dependency packages.
+Copy paste the script below in terminal and press Enter Key. The script will do everything for you, except that it will ask you provide password and your permission [yes/no] when installing packages of build tools and dependencies, and of course for installing piaware itself..
 
 ```
 git clone https://github.com/abcd567a/archlinux-piaware && bash archlinux-piaware/build-piaware.sh
