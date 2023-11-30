@@ -18,13 +18,15 @@ git clone https://github.com/abcd567a/archlinux-piaware && bash archlinux-piawar
 ## OPTION-2: Manual Method:
 
 ## 1 - Prepration </br>
-### 1.1 - Install tools required to build packages - First thing to be done before attempting to build ANY package </br>
-`sudo pacman --needed -Sy fakeroot binutils git autoconf make gcc glibc patch which`
+### 1.1 - Install tools and dependencies required to build packages - First thing to be done before attempting to build package </br>
+`sudo pacman --needed -S fakeroot binutils git autoconf make gcc glibc patch which`
+
 </br>
-### 1.2 - Install dependencies available in Arch Linux Repository </br>
-`sudo pacman --needed -Sy tcl python python-setuptools python-build python-installer tk net-tools `
+
+ 
+`sudo pacman --needed -S tcl python python-setuptools python-build python-installer python-wheel tk net-tools `
 </br>
-### 1.3 - Build and Install depencies not available in repository.</br>
+### 1.2 - Build and Install depencies not available in repository.</br>
 NOTE: Building these requires build tools (item 1.1 and 1.2 above) to be installed first.</br>
 
 **1.3.1 - tcllib** </br>
