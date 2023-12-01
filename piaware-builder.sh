@@ -3,7 +3,8 @@
 DL_DIR=archlinux-piaware
 INST_DIR=/usr/share/piaware-builder
 USR=`whoami`
-echo -e "\e[1;32mCreating dedicated folder \e[39m" ${INST_DIR} "\e[39m"
+echo ""
+echo -e "\e[1;95mCreating dedicated folder \e[39m" ${INST_DIR} "\e[39m"
 echo -e "\e[1;32mThis folder will hold cloned source-code and built package \e[39m"
 sleep 3
 sudo mkdir ${INST_DIR}
