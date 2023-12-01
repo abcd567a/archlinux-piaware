@@ -4,18 +4,24 @@
 - faup1090
 - fa-mlat-client
 
-## OPTION-1: Fully automated install
-
+### OPTION-1: Fully automated install - The installation script creates a dedicated folder "/usr/share/piaware-builder" and all cloned code and built packages are saved in it
 Copy paste the script below in terminal and press Enter Key. The script will do everything for you, except that it will ask you provide password and your permission [yes/no] when installing packages of build tools and dependencies, and of course for installing piaware itself..
 
 ```
-git clone https://github.com/abcd567a/archlinux-piaware && bash archlinux-piaware/build-piaware.sh
+bash -c "$(wget -O - https://github.com/abcd567a/archlinux-piaware/raw/master/piaware-builder.sh)"  
 
 ```
 
-</br>
+### OPTION-2: Fully automated install - All cloned code and built packages are saved in user's home folder
+Copy paste the script below in terminal and press Enter Key. The script will do everything for you, except that it will ask you provide password and your permission [yes/no] when installing packages of build tools and dependencies, and of course for installing piaware itself..
 
-## OPTION-2: Manual Method:
+```
+git clone https://github.com/abcd567a/archlinux-piaware && bash archlinux-piaware/build-piaware.sh  
+
+```
+
+
+### OPTION-3: Manual Method:
 
 ## 1 - Prepration </br>
 ### 1.1 - Install tools and dependencies required to build packages - First thing to be done before attempting to build package </br>
