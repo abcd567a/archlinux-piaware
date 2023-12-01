@@ -5,7 +5,7 @@ INST_DIR=/usr/share/piaware-builder
 USR=`whoami`
 echo -e "\e[1;32mCreating dedicated folder \e[39m" ${INST_DIR} "\e[39m"
 echo -e "\e[1;32mThis folder will hold cloned source-code and built package \e[39m"
-sleep 2
+sleep 3
 sudo mkdir ${INST_DIR}
 sudo chown ${USR} ${INST_DIR}
 
@@ -57,11 +57,21 @@ cd tcllauncher
 makepkg -si
 
 echo ""
-echo -e "\e[1;95mInstallation of Build Tools and Dependency packages completed \e[39m"
+echo -e "\e[1;32mInstallation of Build Tools and Dependency packages completed \e[39m"
 echo ""
-echo -e "\e[1;32mNow Building package PIAWARE \e[39m"
+echo -e "\e[1;95mNow Building package PIAWARE \e[39m"
 echo ""
 sleep 2
 cd ${INST_DIR}/${DL_DIR}
 makepkg -si
+
+echo ""
+echo ""
+echo -e "\e[1;95mAll cloned source-code and built package are located in \e[0;39m"
+echo -e "\e[1;95mdedicated folder \e[39m" ${INST_DIR} "\e[0;39m"
+echo -e ""
+
+
+
+
 
