@@ -4,6 +4,12 @@ DL_DIR=archlinux-piaware
 INST_DIR=/usr/share/piaware-builder
 USR=`whoami`
 echo ""
+echo -e "\e[1;32mInstalling following Build Tools \e[39m"
+echo -e "\e[1;32m   git fakeroot patch gcc make autoconf \e[39m"
+sleep 3
+sudo pacman --needed -S git fakeroot patch gcc make autoconf
+
+echo ""
 echo -e "\e[1;95mCreating dedicated folder \e[39m" ${INST_DIR} "\e[39m"
 echo -e "\e[1;32mThis folder will hold cloned source-code and built package \e[39m"
 sleep 3
@@ -13,14 +19,9 @@ sudo chown ${USR} ${INST_DIR}
 git clone https://github.com/abcd567a/${DL_DIR} ${INST_DIR}/${DL_DIR}
 
 echo ""
-echo -e "\e[1;32mInstalling packages to provide Build Tools and Dependencies \e[39m"
-echo ""
-sleep 2
-sudo pacman --needed -S fakeroot git gcc make binutils pkgconf glibc which
-sudo pacman --needed -S patch autoconf tcl tk openssl
-sudo pacman --needed -S python python-setuptools python-pip net-tools
-sudo pacman --needed -S python-build python-installer
-
+echo -e "\e[1;95mBuilding and Installing following packages \e[39m"
+echo -e "\e[1;95mwhich are NOT available in Arch Linux repo \e[39m"
+echo -e "\e[1;95m  tcllib tclx tcltls tcllauncher \e[39m"
 echo ""
 echo -e "\e[1;32mBuilding and Installing package tcllib \e[39m"
 echo ""
