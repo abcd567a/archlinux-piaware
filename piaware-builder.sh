@@ -4,7 +4,7 @@ DL_DIR=archlinux-piaware
 INST_DIR=/usr/share/piaware-builder
 USR=`whoami`
 echo ""
-echo -e "\e[1;32mInstalling following Build Tools \e[39m"
+echo -e "\e[1;32mInstalling (if not already installed) following Build Tools \e[39m"
 echo -e "\e[1;32m   git fakeroot patch gcc make autoconf \e[39m"
 sleep 3
 sudo pacman --needed -S git fakeroot patch gcc make autoconf
