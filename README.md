@@ -19,7 +19,7 @@ bash -c "$(wget -O - https://github.com/abcd567a/archlinux-piaware/raw/master/pi
 
 
 #### 2.2 - Build and Install depencies not available in repository.</br>
-NOTE: Building these requires build tools (item 1.1 and 1.2 above) to be installed first.</br>
+NOTE: Building these requires build tools (item 2.1 above) to be installed first.</br>
 
 **2.2.1 - tcllib** </br>
 ```
