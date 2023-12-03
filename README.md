@@ -4,7 +4,7 @@
 - faup1090
 - fa-mlat-client
 
-### OPTION-1: Fully automated install - The installation script creates a dedicated folder "/usr/share/piaware-builder" and all cloned code and built packages are saved in it
+### OPTION-1: Fully automated install </br>The installation script creates a dedicated folder "/usr/share/piaware-builder" and all cloned code and built packages are saved in it
 Copy paste the script below in terminal and press Enter Key. The script will do everything for you, except that it will ask you provide password and your permission [yes/no] when installing packages of build tools and dependencies, and of course for installing piaware itself..
 
 ```
