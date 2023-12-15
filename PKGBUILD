@@ -25,6 +25,8 @@ md5sums=('SKIP' 'SKIP' 'SKIP')
 
 install=piaware.install
 
+backup=(etc/piaware.conf)
+
 pkgver() {
   cd ${srcdir}/piaware
   git describe --tags | sed 's/-.*//'
