@@ -57,8 +57,8 @@ makepkg -si
 **2.2.5 - mlat-client** </br>
 ```
 cd ~/
-git clone https://github.com/mutability/mlat-client  
-cd mlat-client 
+git clone https://github.com/abcd567a/archlinux-mlat-client  
+cd archlinux-mlat-client 
 makepkg -si  
 ```
 
