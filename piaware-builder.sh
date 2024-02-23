@@ -70,6 +70,15 @@ cd archlinux-mlat-client
 makepkg -si
 
 echo ""
+echo -e "\e[1;32mBuilding and Installing packages mlat-client \e[39m"
+echo ""
+sleep 2
+cd ${INST_DIR}
+git clone https://github.com/abcd567a/archlinux-mlat-client   
+cd archlinux-mlat-client
+makepkg -si
+
+echo ""
 echo -e "\e[1;32mInstallation of Build Tools and Dependency packages completed \e[39m"
 echo ""
 echo -e "\e[1;95mNow Building package PIAWARE \e[39m"
