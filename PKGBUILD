@@ -38,6 +38,7 @@ build() {
   cd ${srcdir}/faup1090
   git fetch --all
   git reset --hard origin/master
+  patch -p0 -i ../../faup1090-Makefile.patch
   make faup1090
 
 ## Build piaware
