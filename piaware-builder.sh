@@ -4,12 +4,12 @@ DL_DIR=archlinux-piaware
 INST_DIR=/usr/share/piaware-builder
 USR=`whoami`
 echo ""
-echo -e "\e[1;32mInstalling (if not already installed) following Build Tools \e[39m"
+echo -e "\e[1;95mIf NOT already installed, \e[1;32mthen will install following Build Tools: \e[39m"
 echo ""
-echo -e "\e[1;95m   git fakeroot patch gcc make autoconf \e[39m"
+echo -e "\e[1;95m   git fakeroot gcc make pkgconf autoconf patch debugedit \e[39m"
 echo ""
 sleep 3
-sudo pacman --needed -S git fakeroot patch gcc make autoconf
+sudo pacman --needed -S git fakeroot gcc make pkgconf autoconf patch debugedit
 
 echo ""
 echo -e "\e[1;95mCreating dedicated folder \e[39m" ${INST_DIR} "\e[39m"
@@ -31,8 +31,7 @@ sleep 2
 cd ${INST_DIR}
 git clone https://aur.archlinux.org/tcllib
 cd tcllib
-makepkg -si
-sudo pacman -R tcllib-debug --noconfirm
+makepkg -si OPTIONS=-debug
 
 echo ""
 echo -e "\e[1;32mBuilding and Installing package tclx \e[39m"
@@ -41,8 +40,7 @@ sleep 2
 cd ${INST_DIR}
 git clone https://aur.archlinux.org/tclx
 cd tclx
-makepkg -si
-sudo pacman -R tclx-debug --noconfirm
+makepkg -si OPTIONS=-debug
 
 echo ""
 echo -e "\e[1;32mBuilding and Installing package tcltls \e[39m"
@@ -51,8 +49,7 @@ sleep 2
 cd ${INST_DIR}
 git clone https://aur.archlinux.org/tcltls
 cd tcltls
-makepkg -si
-sudo pacman -R tcltls-debug --noconfirm
+makepkg -si OPTIONS=-debug
 
 echo ""
 echo -e "\e[1;32mBuilding and Installing package tcllauncher \e[39m"
@@ -61,8 +58,7 @@ sleep 2
 cd ${INST_DIR}
 git clone https://aur.archlinux.org/tcllauncher
 cd tcllauncher
-makepkg -si
-sudo pacman -R tcllauncher-debug --noconfirm
+makepkg -si OPTIONS=-debug
 
 echo ""
 echo -e "\e[1;32mBuilding and Installing package mlat-client \e[39m"
@@ -71,8 +67,7 @@ sleep 2
 cd ${INST_DIR}
 git clone https://github.com/abcd567a/archlinux-mlat-client   
 cd archlinux-mlat-client
-makepkg -si
-sudo pacman -R mlat-client-debug --noconfirm
+makepkg -si OPTIONS=-debug
 
 echo ""
 echo -e "\e[1;32mInstallation of Build Tools and Dependency packages completed \e[39m"
@@ -81,8 +76,7 @@ echo -e "\e[1;95mNow Building package PIAWARE \e[39m"
 echo ""
 sleep 2
 cd ${INST_DIR}/${DL_DIR}
-makepkg -si
-sudo pacman -R piaware-debug --noconfirm
+makepkg -si OPTIONS=-debug
 
 echo ""
 echo ""
