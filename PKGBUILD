@@ -36,8 +36,8 @@ pkgver() {
 build() {
 ## Build faup1090
   cd ${srcdir}/faup1090
-  git fetch --all
-  git reset --hard origin/master
+  ## git fetch --all
+  ## git reset --hard origin/master
   make faup1090
 
 ## Build piaware
