@@ -20,7 +20,7 @@ depends=('tcllib' 'tcltls' 'tclx' 'net-tools')
 optdepends=('mlat-client')
 
 source=('piaware::git+https://github.com/flightaware/piaware'
-        'faup1090::git+https://github.com/flightaware/dump1090')
+        'faup1090::git+https://github.com/flightaware/dump1090#branch=dev')
 
 md5sums=('SKIP' 'SKIP')
 
