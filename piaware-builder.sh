@@ -31,16 +31,22 @@ sleep 2
 cd ${INST_DIR}
 git clone https://aur.archlinux.org/tcllib
 cd tcllib
+sudo chmod 666 PKGBUILD
+sudo echo "options=('!strip')" >> PKGBUILD
+sudo chmod 644 PKGBUILD
 makepkg -si 
-sudo pacman -R tcllib-debug --noconfirm
+
 echo -e "\e[1;32mBuilding and Installing package tclx \e[39m"
 echo ""
 sleep 2
 cd ${INST_DIR}
 git clone https://aur.archlinux.org/tclx
 cd tclx
+sudo chmod 666 PKGBUILD
+sudo echo "options=('!strip')" >> PKGBUILD
+sudo chmod 644 PKGBUILD
 makepkg -si
-sudo pacman -R tclx-debug --noconfirm
+
 echo ""
 echo -e "\e[1;32mBuilding and Installing package tcltls \e[39m"
 echo ""
@@ -48,8 +54,11 @@ sleep 2
 cd ${INST_DIR}
 git clone https://aur.archlinux.org/tcltls
 cd tcltls
+sudo chmod 666 PKGBUILD
+sudo echo "options=('!strip')" >> PKGBUILD
+sudo chmod 644 PKGBUILD
 makepkg -si
-sudo pacman -R tcltls-debug --noconfirm
+
 echo ""
 echo -e "\e[1;32mBuilding and Installing package tcllauncher \e[39m"
 echo ""
@@ -57,8 +66,11 @@ sleep 2
 cd ${INST_DIR}
 git clone https://aur.archlinux.org/tcllauncher
 cd tcllauncher
+sudo chmod 666 PKGBUILD
+sudo echo "options=('!strip')" >> PKGBUILD
+sudo chmod 644 PKGBUILD
 makepkg -si
-sudo pacman -R tcllauncher-debug --noconfirm
+
 echo ""
 echo -e "\e[1;32mBuilding and Installing package mlat-client \e[39m"
 echo ""
@@ -66,8 +78,11 @@ sleep 2
 cd ${INST_DIR}
 git clone https://github.com/abcd567a/archlinux-mlat-client   
 cd archlinux-mlat-client
+sudo chmod 666 PKGBUILD
+sudo echo "options=('!strip')" >> PKGBUILD
+sudo chmod 644 PKGBUILD
 makepkg -si
-sudo pacman -R mlat-client-debug --noconfirm
+
 echo ""
 echo -e "\e[1;32mInstallation of Build Tools and Dependency packages completed \e[39m"
 echo ""
@@ -75,8 +90,11 @@ echo -e "\e[1;95mNow Building package PIAWARE \e[39m"
 echo ""
 sleep 2
 cd ${INST_DIR}/${DL_DIR}
+sudo chmod 666 PKGBUILD
+sudo echo "options=('!strip')" >> PKGBUILD
+sudo chmod 644 PKGBUILD
 makepkg -si
-sudo pacman -R piaware-debug --noconfirm
+
 echo ""
 echo ""
 echo -e "\e[1;95mAll cloned source-code and built package are located in \e[0;39m"
