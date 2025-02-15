@@ -31,17 +31,16 @@ sleep 2
 cd ${INST_DIR}
 git clone https://aur.archlinux.org/tcllib
 cd tcllib
-makepkg -si OPTIONS=-debug
-
-echo ""
+makepkg -si 
+sudo pacman -R tcllib-debug --noconfirm
 echo -e "\e[1;32mBuilding and Installing package tclx \e[39m"
 echo ""
 sleep 2
 cd ${INST_DIR}
 git clone https://aur.archlinux.org/tclx
 cd tclx
-makepkg -si OPTIONS=-debug
-
+makepkg -si
+sudo pacman -R tclx-debug --noconfirm
 echo ""
 echo -e "\e[1;32mBuilding and Installing package tcltls \e[39m"
 echo ""
@@ -49,8 +48,8 @@ sleep 2
 cd ${INST_DIR}
 git clone https://aur.archlinux.org/tcltls
 cd tcltls
-makepkg -si OPTIONS=-debug
-
+makepkg -si
+sudo pacman -R tcltls-debug --noconfirm
 echo ""
 echo -e "\e[1;32mBuilding and Installing package tcllauncher \e[39m"
 echo ""
@@ -58,8 +57,8 @@ sleep 2
 cd ${INST_DIR}
 git clone https://aur.archlinux.org/tcllauncher
 cd tcllauncher
-makepkg -si OPTIONS=-debug
-
+makepkg -si
+sudo pacman -R tcllauncher-debug --noconfirm
 echo ""
 echo -e "\e[1;32mBuilding and Installing package mlat-client \e[39m"
 echo ""
@@ -67,8 +66,8 @@ sleep 2
 cd ${INST_DIR}
 git clone https://github.com/abcd567a/archlinux-mlat-client   
 cd archlinux-mlat-client
-makepkg -si OPTIONS=-debug
-
+makepkg -si
+sudo pacman -R mlat-client-debug --noconfirm
 echo ""
 echo -e "\e[1;32mInstallation of Build Tools and Dependency packages completed \e[39m"
 echo ""
@@ -76,8 +75,8 @@ echo -e "\e[1;95mNow Building package PIAWARE \e[39m"
 echo ""
 sleep 2
 cd ${INST_DIR}/${DL_DIR}
-makepkg -si OPTIONS=-debug
-
+makepkg -si
+sudo pacman -R piaware-debug --noconfirm
 echo ""
 echo ""
 echo -e "\e[1;95mAll cloned source-code and built package are located in \e[0;39m"
